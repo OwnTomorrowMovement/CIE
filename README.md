@@ -56,13 +56,20 @@ Citizens' Internet Exploerer 公民浏览器，旨在帮助用户保护浏览隐
    
    需要端口3000  
 
-3. 客户端：
+2. 客户端：
    
    获取最新的tags，开箱即用
    
    使用时运行 python ./cli.py  
 
 
+3. CodeSpace：  
+
+   理论上，本项目服务端可以被部署到CodeSpace（下简称CS），部署在CS可以有效防止服务端SSH被暴力破解（因为SSH不开放）。
+   只要您的Github账号安全措施足够好，就可以完全不必惧怕共匪特务。
+   但是由于本项目当前不支持HTTPS，而CodeSpace仅限HTTPS端口映射，所以客户端需要使用反向代理。
+   具体过程在此不多赘述，原理为 服务端HTTP -> 端口映射HTTPS -> 反向代理HTTP - > HTTP客户端
+   
 ## 贡献  
 
 欢迎贡献！请遵循以下步骤：  
